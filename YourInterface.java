@@ -1,0 +1,3 @@
+interface YourInterface{
+	void aMethod();
+}

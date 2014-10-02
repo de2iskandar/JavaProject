@@ -1,0 +1,43 @@
+package pbo;
+
+import java.util.Scanner;
+class BangunDatar{
+	public static void main(String[]args){
+		double a=0,t=0;
+		System.out.println("\t\t===============");
+		System.out.println("\t\t=  Segi Tiga  =");
+		System.out.println("\t\t===============");
+		input i = new input();
+		segiTiga st=new segiTiga(i.inputA(a),i.inputT(t));
+		System.out.println("========================================");
+		System.out.println("Luas Segi Tiga\t\t\t: "+st.cariLuas());
+		System.out.println("========================================");
+	}
+}
+
+class input{
+	double inputA(double alas){
+		Scanner s=new Scanner(System.in);
+		System.out.print("Input Alas\t\t\t: ");
+		alas=s.nextInt();
+		return alas;
+	}
+	double inputT(double tinggi){
+		Scanner s=new Scanner(System.in);
+		System.out.print("Input Tinggi\t\t\t: ");
+		tinggi=s.nextInt();
+		return tinggi;
+	}
+}
+
+class segiTiga{
+	private double alas=1;
+	private double tinggi=1;
+	segiTiga(double a,double t){
+		alas=a;
+		tinggi=t;
+	}
+	double cariLuas(){
+		return 0.5*(alas*tinggi);
+	}
+}
